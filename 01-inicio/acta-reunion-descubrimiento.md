@@ -4,7 +4,15 @@
 **Asistentes:** Katherine Tisalema (Jefe de Proyecto), Marta Sánchez (Gerente FisioVital)
  
 ## Temas tratados
-- Requisitos y puntos claves que debe tener el proyecto, tales como el alcance, plazos, presupueto, usuarios, restricciones
+Requisitos y puntos claves que debe tener el proyecto
+-  Presupuesto
+-  Plazos
+-  Parametros del proyecto
+-  Pagos online
+-  Criterios de exito
+-  Stakeholders
+-  Protección de datos
+-  Capacitacion del personal
  
 ## Acuerdos
 - El proyecto seguir los siguientes parametros.
@@ -17,6 +25,6 @@
 - Capacitacion de personal: Orientacion sobre el uso de la pagina 
  
 ## Preguntas abiertas pendientes de resolver
-- Inormacion basica de la clinica
+- Presupuestos para mantenimientos futuros
 - App movil opcional
-- 
+- Capacitacion del personal sobre la pagina
