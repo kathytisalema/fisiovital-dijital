@@ -26,5 +26,5 @@ Requisitos y puntos claves que debe tener el proyecto
  
 ## Preguntas abiertas pendientes de resolver
 - Presupuestos para mantenimientos futuros
-- App movil opcional
-- Capacitacion del personal sobre la pagina
+- App movil propuesta opcional 
+- Capacitacion del personal sobre la programa web
