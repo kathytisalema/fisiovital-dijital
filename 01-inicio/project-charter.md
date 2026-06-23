@@ -41,6 +41,7 @@ Presupuesto entre 25000 y 35000 euros (sin costos de mantenimientos posteriores)
 - Programa web colapsada y retrasos en la entrega de informacion
 - Resistencia del personal a la capacitacion del uso de web
 - Cambios frecuentes de requisitos
+- Cambio en la normativa de proteccion de datos
  
 ## 7. Jefe de proyecto y autoridad
 [Katherine Tisalema] — autoridad para: 
