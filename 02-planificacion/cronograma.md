@@ -1,0 +1,41 @@
+# Cronograma — FisioVital Digital
+ 
+## Estimaciones recogidas del equipo
+| Módulo/tarea | Responsable | Duración estimada | Depende de |
+|---|---|---|---|
+| Autenticación|Backend| 1 semana | Inicio de proyecto|
+| Módulo Citas | Backend | 2 semanas |  Autenticación|
+| Módulo Pacientes/Historial| Backend | 2,5 semans| Autenticación|
+|Módulo Facturación| Backend| 3 semanas| Citas y Pacientes/Historial|
+|Módulo Administración/Informes| Backend | 1,5 semanas | Citas, Pacientes, Facturación|
+| Pantallas Autencticación| Frontend| 0,5 semana | Backend: Autenticación|
+|Pantallas Citas| Frontend | 2 semanas| Backend: Citas + contrato API|
+| Pantallas Pacientes/Histotial| Frontend 
+
+
+
+```mermaid
+gantt 
+    title Cronograma FisioVital Digital
+
+    dateFormat YYYY-MM-DD
+    axisFormat %d/%m
+    section Planificación   
+    Definir alcance y EDT       :done, plan1, 2026-07-06, 5d
+    section Backend
+    Autenticación               :back1, after plan1, 5d
+    Módulo Citas                :back2, after back1, 10d
+    Módulo Pacientes/Historial  :back3, after back1, 12d
+    Módulo Facturación          :back4, after back2, 15d
+    section Frontend
+    Pantallas Autenticación     :front1, after back1, 3d
+    Pantallas Citas             :front2, after back2, 10d
+    section QA
+    Plan de pruebas             :qa1, after plan1, 5d
+    Pruebas Facturación         :qa2, after back4, 5d
+    section DevOps
+    Entornos                    :dev1, after plan1, 5d
+    Pipeline CI/CD              :dev2, after dev1, 5d
+    section Hitos
+    Entrega final               :milestone, m1, 2026-09-28, 0d
+```
