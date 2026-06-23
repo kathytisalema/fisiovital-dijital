@@ -10,15 +10,22 @@
 |Módulo Administración/Informes| Backend | 1,5 semanas | Citas, Pacientes, Facturación|
 | Pantallas Autencticación| Frontend| 0,5 semana | Backend: Autenticación|
 |Pantallas Citas| Frontend | 2 semanas| Backend: Citas + contrato API|
-| Pantallas Pacientes/Histotial| Frontend 
-
+| Pantallas Pacientes/Histotial| Frontend | 1,5 semnas| Backend:Pacientes/Histotial|
+| Pantallas Facturación| Frontend | 1,5 semanas | Backend: Facturación + contrato API|
+| Panel Administración/Informes| Frontend | 1,5 semanas| Resto de módulos backend | 
+|Diseño plan de pruebas | QA | 1 semana | En paralelo desde el inicio|
+| Ejecución de pruebas por módulo| QA | 0,5 semana por modulo| Cierre de cada módulo|
+| Regresión final | QA| 1 semana| Todos los módulos completos|
+| Configuración de entornos | DevOps | 1 semana | Inicio del proyecto|
+| Pipeline CI/CD | DevOps | 1 semana | Entornos configurados|
+| Despliegue final y checklist | DevOps | 0,5 emanas| Regresión final de QA|
 
 
 ```mermaid
 gantt 
     title Cronograma FisioVital Digital
 
-    dateFormat YYYY-MM-DD
+    dateFormat 2026-07-01
     axisFormat %d/%m
     section Planificación   
     Definir alcance y EDT       :done, plan1, 2026-07-06, 5d
