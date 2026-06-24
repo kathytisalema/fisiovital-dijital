@@ -1,23 +1,44 @@
 openapi: 3.0.0
+
 info:
   title: API FisioVital Digital
   version: "1.0"
   description: Contrato de API para los módulos de Citas y Facturación
- 
+
 paths:
+
   /citas:
     get:
       summary: Listar citas
       responses:
         "200":
           description: Lista de citas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Cita"
+
     post:
       summary: Crear una nueva cita
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Cita"
       responses:
         "201":
           description: Cita creada
- 
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Cita"
+
+
   /citas/{id}:
+
     get:
       summary: Obtener el detalle de una cita
       parameters:
@@ -29,45 +50,256 @@ paths:
       responses:
         "200":
           description: Detalle de la cita
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Cita"
+
     put:
       summary: Modificar una cita
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Cita"
       responses:
         "200":
           description: Cita modificada
+
     delete:
       summary: Cancelar una cita
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         "204":
           description: Cita cancelada
- 
+
+
   /facturas:
+
     get:
       summary: Listar facturas
       responses:
         "200":
           description: Lista de facturas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Factura"
+
     post:
       summary: Generar una factura
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Factura"
       responses:
         "201":
           description: Factura generada
- 
-  # Pregunta a Backend si falta algún endpoint de Facturación y añádelo aquí
- 
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Factura"
+
+
+  /facturas/{id}:
+
+    get:
+      summary: Obtener factura por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Detalle de factura
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Factura"
+
+
+  /facturas/{id}/estado:
+
+    put:
+      summary: Actualizar estado de factura
+      description: Permite marcar una factura como pagada o modificar su estado.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                estado:
+                  type: string
+                  enum:
+                    - pendiente
+                    - pagada
+                    - anulada
+              required:
+                - estado
+
+      responses:
+        "200":
+          description: Estado actualizado correctamente
+
+        "404":
+          description: Factura no encontrada
+
+
 components:
+
   schemas:
+
     Cita:
       type: object
+
+      required:
+        - id
+        - pacienteId
+        - fisioterapeutaId
+        - fecha
+        - hora
+        - estado
+
       properties:
+
         id:
           type: string
+          example: CIT001
+
+        pacienteId:
+          type: string
+          example: PAC001
+
+        pacienteNombre:
+          type: string
+          example: Juan Pérez
+
+        fisioterapeutaId:
+          type: string
+          example: FIS001
+
+        fisioterapeutaNombre:
+          type: string
+          example: María Gómez
+
         fecha:
           type: string
           format: date
-        # Pregunta a Backend qué otros campos necesita una Cita y añádelos aquí
+          example: "2026-06-24"
+
+        hora:
+          type: string
+          example: "10:30"
+
+        motivo:
+          type: string
+          example: Rehabilitación lumbar
+
+        estado:
+          type: string
+          enum:
+            - programada
+            - completada
+            - cancelada
+          example: programada
+
+        observaciones:
+          type: string
+          example: Primera valoración del paciente
+
+
     Factura:
+
       type: object
+
+      required:
+        - id
+        - citaId
+        - pacienteId
+        - total
+        - estado
+
       properties:
+
         id:
           type: string
-        # Pregunta a Backend qué campos necesita una Factura y añádelos aquí
+          example: FAC001
+
+        citaId:
+          type: string
+          example: CIT001
+
+        pacienteId:
+          type: string
+          example: PAC001
+
+        fecha:
+          type: string
+          format: date
+          example: "2026-06-24"
+
+        tipo:
+          type: string
+          enum:
+            - particular
+            - seguro
+            - mixto
+          example: mixto
+
+        importeTotal:
+          type: number
+          format: float
+          example: 75.50
+
+        importeSeguro:
+          type: number
+          format: float
+          example: 50.00
+
+        importePaciente:
+          type: number
+          format: float
+          example: 25.50
+
+        metodoPago:
+          type: string
+          enum:
+            - efectivo
+            - tarjeta
+            - transferencia
+          example: tarjeta
+
+        estado:
+          type: string
+          enum:
+            - pendiente
+            - pagada
+            - anulada
+          example: pendiente
