@@ -34,7 +34,7 @@ gantt
     Módulo Citas                :back2, after back1, 10d
     Módulo Pacientes/Historial  :back3, after back1, 12d
     Módulo Facturación          :back4, after back2, 15d
-    Módulo Administ/Informes    : back5, after back3, 7d
+    Módulo Administ/Informes    :back5, after back3, 7d
     section Frontend
     Pantallas Autenticación     :front1, after back1, 3d
     Pantallas Citas             :front2, after back2, 10d
