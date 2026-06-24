@@ -29,24 +29,34 @@ gantt
     axisFormat %d/%m
     section Planificación   
     Definir alcance y EDT       :done, plan1, 2026-07-06, 5d
+
     section Backend
     Autenticación               :back1, after plan1, 5d
     Módulo Citas                :back2, after back1, 10d
     Módulo Pacientes/Historial  :back3, after back1, 12d
     Módulo Facturación          :back4, after back2, 15d
-    Módulo Administ/Informes    :back5, after back3, 7d
+    Módulo Administ/Informes    :back5, after back4, 7d
+
     section Frontend
     Pantallas Autenticación     :front1, after back1, 3d
     Pantallas Citas             :front2, after back2, 10d
-    Pantallas Facturación       :front3, after back3, 7d
-    Panel Administ/Informes     :front4, after back4, 7d
+    Pantalla Pacientes/Historia :front3, after back3, 7d
+    Pantallas Facturación       :front4, after back4, 7d
+    Panel Administ/Informes     :front5, after back5, 7d
+
     section QA
-    Plan de pruebas             :qa1, after plan1, 5d
-    Ejecución pruebas módulos   :qa2, after back4, 2d
-    Pruebas Facturación         :qa3, after back4, 5d
+    Diseño de plan prueba       :qa1, after plan1, 5d
+    Prueba módulo citas         :qa2, after back2, 2d
+    Pruebas módulo Pacientes    :qa3, after back3, 2d
+    Pruebas Facturación         :qa4, after back4, 2d
+    Pruebas módulos Administa   :qa5, after back5, 2d
+    Regresión final             :qa6, after front5, 5d
+
     section DevOps
     Entornos                    :dev1, after plan1, 5d
     Pipeline CI/CD              :dev2, after dev1, 5d
+    Despliegue final y checklist:dev3, after qa6, 2d
+
     section Hitos
     Entrega final               :milestone, m1, 2026-09-28, 0d
 ```

@@ -29,13 +29,12 @@
 
 ## Hitos
 
-- Finalización del módulo de Autenticación (Backend y Frontend).
+- Módulo de Autenticación (Backend y Frontend) completado
 - Finalización del módulo de Citas en Backend.
 - Finalización del módulo de Pacientes/Historial en Backend.
-- Plan de pruebas ejecutado según lo previsto.
 - Despliegue completo de entornos de desarrollo.
+- Plan de pruebas ejecutado según lo previsto.
 - Pipeline CI/CD operativo.
-
 
 ## Problemas activos
 
@@ -44,3 +43,6 @@
 - Pantallas Pacientes/Historial aún no iniciadas debido a la priorización de otros módulos.
 - Incidencia INC-001 detectada en el pipeline CI/CD y pendiente de análisis.
 
+## Resumen ejecutivo
+
+El proyecto avanza a un ritmo inferior al planificado (**SPI = 0,84**) y presenta una ligera desviación de costes (**CPI = 0,95**). Los principales focos de atención son el módulo de Facturación y el inicio de las Pantallas de Pacientes/Historial, mientras que el resto de áreas mantienen el calendario previsto.
