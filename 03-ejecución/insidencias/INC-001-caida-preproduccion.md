@@ -21,7 +21,6 @@ Se cambio una variable de entorno de conexión a la base de datos sin haber prob
 - Se restauró la configuración anterior
 - Se reiniciaron los servicios afectados
 - Se propuso incorportar validaciones de configuración antes de desplegar cambios en el entorno
-- 
 
  
 ## Issue relacionado
