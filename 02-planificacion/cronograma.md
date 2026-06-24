@@ -6,14 +6,14 @@
 | Autenticación|Backend| 1 semana | Inicio de proyecto|
 | Módulo Citas | Backend | 2 semanas |  Autenticación|
 | Módulo Pacientes/Historial| Backend | 2,5 semans| Autenticación|
-|Módulo Facturación| Backend| 3 semanas| Citas y Pacientes/Historial|
-|Módulo Administración/Informes| Backend | 1,5 semanas | Citas, Pacientes, Facturación|
+| Módulo Facturación| Backend| 3 semanas| Citas y Pacientes/Historial|
+| Módulo Administración/Informes| Backend | 1,5 semanas | Citas, Pacientes, Facturación|
 | Pantallas Autencticación| Frontend| 0,5 semana | Backend: Autenticación|
-|Pantallas Citas| Frontend | 2 semanas| Backend: Citas + contrato API|
+| Pantallas Citas| Frontend | 2 semanas| Backend: Citas + contrato API|
 | Pantallas Pacientes/Histotial| Frontend | 1,5 semnas| Backend:Pacientes/Histotial|
 | Pantallas Facturación| Frontend | 1,5 semanas | Backend: Facturación + contrato API|
 | Panel Administración/Informes| Frontend | 1,5 semanas| Resto de módulos backend | 
-|Diseño plan de pruebas | QA | 1 semana | En paralelo desde el inicio|
+| Diseño plan de pruebas | QA | 1 semana | En paralelo desde el inicio|
 | Ejecución de pruebas por módulo| QA | 0,5 semana por modulo| Cierre de cada módulo|
 | Regresión final | QA| 1 semana| Todos los módulos completos|
 | Configuración de entornos | DevOps | 1 semana | Inicio del proyecto|
@@ -34,12 +34,16 @@ gantt
     Módulo Citas                :back2, after back1, 10d
     Módulo Pacientes/Historial  :back3, after back1, 12d
     Módulo Facturación          :back4, after back2, 15d
+    Módulo Administ/Informes    : back5, after back3, 7d
     section Frontend
     Pantallas Autenticación     :front1, after back1, 3d
     Pantallas Citas             :front2, after back2, 10d
+    Pantallas Facturación       :front3, after back3, 7d
+    Panel Administ/Informes     :front4, after back4, 7d
     section QA
     Plan de pruebas             :qa1, after plan1, 5d
-    Pruebas Facturación         :qa2, after back4, 5d
+    Ejecución pruebas módulos   :qa2, after back4, 2d
+    Pruebas Facturación         :qa3, after back4, 5d
     section DevOps
     Entornos                    :dev1, after plan1, 5d
     Pipeline CI/CD              :dev2, after dev1, 5d
