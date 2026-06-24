@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: API FisioVital Digital
+  version: "1.0"
+  description: Contrato de API para los módulos de Citas y Facturación
+ 
+paths:
+  /citas:
+    get:
+      summary: Listar citas
+      responses:
+        "200":
+          description: Lista de citas
+    post:
+      summary: Crear una nueva cita
+      responses:
+        "201":
+          description: Cita creada
+ 
+  /citas/{id}:
+    get:
+      summary: Obtener el detalle de una cita
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Detalle de la cita
+    put:
+      summary: Modificar una cita
+      responses:
+        "200":
+          description: Cita modificada
+    delete:
+      summary: Cancelar una cita
+      responses:
+        "204":
+          description: Cita cancelada
+ 
+  /facturas:
+    get:
+      summary: Listar facturas
+      responses:
+        "200":
+          description: Lista de facturas
+    post:
+      summary: Generar una factura
+      responses:
+        "201":
+          description: Factura generada
+ 
+  # Pregunta a Backend si falta algún endpoint de Facturación y añádelo aquí
+ 
+components:
+  schemas:
+    Cita:
+      type: object
+      properties:
+        id:
+          type: string
+        fecha:
+          type: string
+          format: date
+        # Pregunta a Backend qué otros campos necesita una Cita y añádelos aquí
+    Factura:
+      type: object
+      properties:
+        id:
+          type: string
+        # Pregunta a Backend qué campos necesita una Factura y añádelos aquí
