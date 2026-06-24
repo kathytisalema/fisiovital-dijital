@@ -14,3 +14,4 @@
 | R8 | Subestimación del esfuerzo necesario para completar los módulos | Equipo/Recursos | Media | Alta | Mitigar: revisar estimaciones y ajustar planificación periódicamente |
  R9 | Cambios frecuentes de los requisitos del cliente puede afectar el alcance y cronograma | Alcance | Alta | Alta | Mitigar: realizar revisiones periódicas y validar requisitos en cada iteración y gestionar cambios formalmente |
 | R10 | Problemas de rendimiento cuando aumente el número de usuarios | Técnico | Baja | Media | Mitigar: realizar pruebas de carga y optimización de consultas |
+| R11| Caida del entorno de pre-produccion | QA | Baja | Media | Mitigar: Volver a la configuración anterior, validaciones de configuración antes de desplegar cambios en el entorno |
