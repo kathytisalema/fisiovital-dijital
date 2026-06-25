@@ -155,14 +155,13 @@ paths:
             schema:
               type: object
               properties:
-                estado:
+                estado_pago:
                   type: string
                   enum:
                     - pendiente
                     - pagada
-                    - anulada
               required:
-                - estado
+                - estado_pago
 
       responses:
         "200":
@@ -181,8 +180,9 @@ components:
 
       required:
         - id
-        - pacienteId
-        - fisioterapeutaId
+        - paciente_id
+        - fisioterapeuta_id
+        - clinica_id
         - fecha
         - hora
         - estado
@@ -193,7 +193,7 @@ components:
           type: string
           example: CIT001
 
-        pacienteId:
+        paciente_id:
           type: string
           example: PAC001
 
@@ -201,13 +201,17 @@ components:
           type: string
           example: Juan Pérez
 
-        fisioterapeutaId:
+        fisioterapeuta_id:
           type: string
           example: FIS001
 
         fisioterapeutaNombre:
           type: string
           example: María Gómez
+
+        clinica_id:
+          type: string
+          example: CLIN001
 
         fecha:
           type: string
@@ -225,10 +229,10 @@ components:
         estado:
           type: string
           enum:
-            - programada
-            - completada
+            - pendiente
+            - confirmada
             - cancelada
-          example: programada
+          example: pendiente
 
         observaciones:
           type: string
@@ -241,10 +245,11 @@ components:
 
       required:
         - id
-        - citaId
-        - pacienteId
-        - total
-        - estado
+        - paciente_id
+        - cita_id
+        - tipo_pago
+        - importe
+        - estado_pago
 
       properties:
 
@@ -252,54 +257,29 @@ components:
           type: string
           example: FAC001
 
-        citaId:
-          type: string
-          example: CIT001
-
-        pacienteId:
+        paciente_id:
           type: string
           example: PAC001
 
-        fecha:
+        cita_id:
           type: string
-          format: date
-          example: "2026-06-24"
+          example: CIT001
 
-        tipo:
+        tipo_pago:
           type: string
           enum:
             - particular
             - seguro
-            - mixto
-          example: mixto
+          example: particular
 
-        importeTotal:
+        importe:
           type: number
           format: float
           example: 75.50
 
-        importeSeguro:
-          type: number
-          format: float
-          example: 50.00
-
-        importePaciente:
-          type: number
-          format: float
-          example: 25.50
-
-        metodoPago:
-          type: string
-          enum:
-            - efectivo
-            - tarjeta
-            - transferencia
-          example: tarjeta
-
-        estado:
+        estado_pago:
           type: string
           enum:
             - pendiente
             - pagada
-            - anulada
           example: pendiente

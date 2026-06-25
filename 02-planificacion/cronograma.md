@@ -22,12 +22,12 @@
 
 
 ```mermaid
-gantt 
+gantt
     title Cronograma FisioVital Digital
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d/%m
 
-    dateFormat 2026-07-01
-    axisFormat %d/%m
-    section Planificación   
+    section Planificación
     Definir alcance y EDT       :done, plan1, 2026-07-06, 5d
 
     section Backend
@@ -35,14 +35,14 @@ gantt
     Módulo Citas                :back2, after back1, 10d
     Módulo Pacientes/Historial  :back3, after back1, 12d
     Módulo Facturación          :back4, after back2, 15d
-    Módulo Administ/Informes    :back5, after back4, 7d
+    Módulo Administ/Informes    :back5, after back4, 8d
 
     section Frontend
-    Pantallas Autenticación     :front1, after back1, 3d
+    Pantallas Autenticación     :front1, after back1, 2d
     Pantallas Citas             :front2, after back2, 10d
-    Pantalla Pacientes/Historia :front3, after back3, 7d
-    Pantallas Facturación       :front4, after back4, 7d
-    Panel Administ/Informes     :front5, after back5, 7d
+    Pantallas Pacientes/Historial :front3, after back3, 8d
+    Pantallas Facturación       :front4, after back4, 8d
+    Panel Administ/Informes     :front5, after back5, 8d
 
     section QA
     Diseño de plan prueba       :qa1, after plan1, 5d

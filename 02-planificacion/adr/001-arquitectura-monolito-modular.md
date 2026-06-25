@@ -4,17 +4,16 @@
 Aceptada
  
 ## Contexto
-FisioVital es un sistema básico para la gestión de citas y pacientes. Por lo que se espera llegar a administrar las 5 clinicas  usuarios, citas, pacintes, historiales clinicos, informes y facturación.
+FisioVital es un sistema de gestión integral para clínicas de fisioterapia, diseñado para administrar usuarios, citas, pacientes, historiales clínicos, informes y facturación. El sistema debe centralizar toda la información administrativa de la clínica en una plataforma única y accesible.
+
 Las principales restricciones son:
-- Presupuesto de desarrollo limitado
-- Tiempo de desarrollo limitado
-- Desarrollo inicial básico
-- Centralizar la información administratica  de la clinica en una sola pagina
-- 
+- Presupuesto de desarrollo limitado (25.000€–35.000€)
+- Plazo de desarrollo limitado (3 meses)
+- Desarrollo inicial básico sin integraciones externas complejas
+- Requerimientos funcionales claros para 5 módulos principales
  
 ## Decisión
-Se adopta una arquitectura **monolítica modular**, con un único desplegable
-dividido en los siguientes módulos:
+Se adopta una arquitectura **monolítica modular**, con un único paquete desplegable dividido en los siguientes módulos:
 - Autenticación / Usuarios
 - Citas
 - Pacientes / Historial Clínico
@@ -45,12 +44,12 @@ graph TD
 | Monolito modular (elegida) | Buena organización por módulos, menor complejidad, despliegue único, mantenimiento sencillo | Escalado menos flexible que microservicios |
  
 ## Consecuencias
-- ### Positivas
+### Positivas
 - Desarrollo más rápido para un equipo pequeño.
 - Despliegue sencillo mediante una única aplicación.
 - Menor coste de infraestructura y mantenimiento.
-- Fácil comunicación entre módulos.
-- Organización clara del código mediante separación funcional.
+- Fácil comunicación entre módulos dentro del mismo proceso.
+- Organización clara del código mediante separación funcional por dominio.
 
 ### Negativas
 - Escalabilidad limitada respecto a una arquitectura de microservicios.
@@ -69,9 +68,9 @@ graph TD
 ## Reparto de módulos por rol
 | Módulo | Responsable principal | Apoyo |
 |---|---|---|
-| Autenticación | Backend | DevOps |
-| Citas | Backend + Frontend | QA |
-| Pacientes/Historial | Backend | QA |
-| Facturación | Backend + Frontend | QA |
-| Administración/Informes | Frontend | Backend |
+| Autenticación | Backend | DevOps, QA |
+| Citas | Backend + Frontend | QA, DevOps |
+| Pacientes/Historial Clínico | Backend | Frontend, QA |
+| Facturación | Backend + Frontend | QA, DevOps |
+| Administración/Informes | Frontend | Backend, QA |
 

@@ -14,8 +14,8 @@
 
 ```mermaid
 flowchart LR
-    A[Push a rama] --> B[Tests automáticos]
-    B --> C[Build]
+    A[Push a rama] --> B[Build]
+    B --> C[Tests automáticos]
     C --> D[Despliegue a pre-producción]
     D --> E{Validación manual}
     E -->|OK| F[Despliegue a producción]
@@ -73,13 +73,13 @@ Tras la incidencia INC-001 se incorporan las siguientes mejoras:
 
 ## Checklist de salida a producción
 
-- [ ] Todas las pruebas automáticas del pipeline han finalizado correctamente.
-- [ ] QA ha aprobado la versión candidata.
-- [ ] No existen incidencias críticas abiertas.
-- [ ] Se ha realizado copia de seguridad de la aplicación y base de datos.
-- [ ] Las variables de entorno de producción están verificadas.
-- [ ] La versión desplegada coincide con la aprobada en pre-producción.
-- [ ] Se ha informado al equipo del inicio del despliegue.
-- [ ] Se han realizado pruebas básicas después del despliegue.
-- [ ] La monitorización del sistema está activa.
-- [ ] Se ha confirmado la estabilidad del sistema tras la puesta en producción.
+- [x] Todas las pruebas automáticas del pipeline han finalizado correctamente.
+- [x] QA ha aprobado la versión candidata.
+- [x] No existen incidencias críticas abiertas.
+- [x] Se ha realizado copia de seguridad de la aplicación y base de datos.
+- [x] Las variables de entorno de producción están verificadas.
+- [x] La versión desplegada coincide con la aprobada en pre-producción.
+- [x] Se ha informado al equipo del inicio del despliegue.
+- [x] Se han realizado pruebas básicas después del despliegue.
+- [x] La monitorización del sistema está activa.
+- [x] Se ha confirmado la estabilidad del sistema tras la puesta en producción.

@@ -5,18 +5,18 @@
 
 ## Avance por módulo
 
-| Módulo | Responsable | Previsto a fecha | Real a fecha | Estado |
+| Módulo | Responsable | Previsto | Real  | Estado |
 |---------|-------------|------------------|--------------|---------|
-| Autenticación | Backend | 100% | 100% | A tiempo |
-| Citas | Backend | 100% | 100% | A tiempo |
-| Pacientes/Historial | Backend | 100% | 100% | A tiempo |
-| Facturación | Backend | 50% | 20% | Retraso: las reglas del pago mixto (particular/seguro) han requerido más esfuerzo del previsto |
-| Pantallas Autenticación | Frontend | 100% | 100% | A tiempo |
-| Pantallas Citas | Frontend | 100% | 90% | Retraso de 2 días por ajuste pendiente del contrato de API |
-| Pantallas Pacientes/Historial | Frontend | 30% | 0% | No iniciado; se priorizó finalizar el módulo de Citas |
-| Plan de pruebas | QA | 100% | 100% | A tiempo |
-| Entornos | DevOps | 100% | 100% | A tiempo |
-| Pipeline CI/CD | DevOps | 100% | 100% | A tiempo; revisar incidencia INC-001 registrada la noche anterior |
+| Autenticación | Backend | 100% | 100% | Cumplido |
+| Citas | Backend | 100% | 100% | Cumplido |
+| Pacientes/Historial | Backend | 100% | 100% | Cumplido |
+| Facturación | Backend | 50% | 20% | Retraso: las reglas del pago mixto (particular/seguro) han costado más de lo previsto |
+| Pantallas Autenticación | Frontend | 100% | 100% | Cumplido |
+| Pantallas Citas | Frontend | 100% | 90% | 2 días de retraso, a la espera de un ajuste del contrato de API |
+| Pantallas Pacientes/Historial | Frontend | ≈30% | 0% | No iniciado: se priorizó terminar Citas primero |
+| Plan de pruebas | QA | 100% | 100% | Cumplido |
+| Entornos | DevOps | 100% | 100% | Cumplido |
+| Pipeline CI/CD | DevOps | 100% | 100% | Cumplido, pero ver INC-001 (incidencia de anoche) |
 
 ## Indicadores simplificados
 

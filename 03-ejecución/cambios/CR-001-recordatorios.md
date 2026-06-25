@@ -4,41 +4,37 @@
 Marta Sánchez (Gerente FisioVital)
  
 ## Descripción de la solicitud
-Se solicita incorportr la funcionalidad de recordadorio de citas automaticas en un lapso de 24h mediante correo electrocico o mensaje de texto y con opcion a cancelación, para evitar aucencias de los pacientes
+Se solicita incorporar la funcionalidad de recordatorios de citas automáticos 24 horas antes, preferiblemente por correo electrónico, con opción a cancelación desde el aviso. El objetivo es reducir ausencias y optimizar el uso de las horas disponibles.
  
 ## Análisis de impacto
-**Alcance:** Se requiere ampliar el módulo de Citas para incluir la gestión de recordatorios automáticos. Será necesario añadir nuevas configuraciones de aviso y adaptar la API para gestionar el envío de notificaciones.
-Estimación aproximada de 2 semanas adicionales de desarrollo, pruebas e integración.
+**Alcance:** Ampliar el módulo de Citas para gestionar recordatorios automáticos 24 horas antes. Incluye crear una tarea programada que revise las citas del día siguiente, generar avisos por correo electrónico y permitir cancelación desde el aviso. Estimación aproximada de 2 semanas adicionales de desarrollo, pruebas e integración.
 
-**Coste:**  
-Incremento estimado de 2.500 € debido al esfuerzo adicional de Backend, configuración DevOps y pruebas QA.
+**Coste:** Incremento estimado de 2.500 € por el esfuerzo adicional de Backend, configuración DevOps y pruebas QA. Existe un margen de hasta 3.000 € adicionales si es necesario.
 
-**Riesgos:**  
-- Dependencia de servicios externos de mensajería o correo.
+**Riesgos:**
+- Dependencia de un servicio de correo externo.
 - Posibles problemas de entrega de notificaciones.
-- Necesidad de cumplir requisitos de privacidad y protección de datos.
-- Aumento de carga en el sistema si crece el número de avisos enviados.
- 
+- Requisitos de privacidad y protección de datos.
+- Aumento de la carga en el sistema si se envía un volumen alto de avisos.
+- Posibles problemas de entrega de notificaciones.
 ## Recomendación técnica
-**Backend:**  
-La implementación es viable. Se recomienda añadir un servicio de notificaciones asociado al módulo de Citas, con tareas programadas para revisar próximas citas y generar los avisos correspondientes.
+**Backend:**
+Es viable. Ya tenemos el email del paciente guardado; necesitamos una tarea programada que revise las citas del día siguiente. Calculo unos 3-4 días de desarrollo.
 
-**DevOps:**  
-No requiere nueva infraestructura crítica. Será necesario configurar variables de entorno, credenciales del servicio de envío y monitorización básica de los procesos automáticos.
+**DevOps:**
+Para enviar emails automáticos necesitamos contratar un servicio de envío de correo, eso no estaba presupuestado: hay que añadirlo al presupuesto de infraestructura.
 
-**QA:**  
-Se recomienda incluir pruebas de envío correcto, cancelación de citas, modificación de horarios y fallos del servicio externo.
-
+**QA:**
+Se recomienda incluir pruebas de envío correcto, cancelación de citas desde el recordatorio, modificación de horarios y fallos del servicio externo.
 
 ## Decisión
-[Aceptado / Rechazado / Aceptado con condiciones] — Fecha: 26/06/2026
+ Aceptado con condiciones — Fecha: 26/06/2026
 
 Condiciones:
 - Implementar primero recordatorios por correo electrónico.
-- Revisar posteriormente la incorporación de SMS o WhatsApp.
+- Revisar SMS solo si queda tiempo y presupuesto.
 - Mantener control de costes y tiempos antes de ampliar el alcance.
 
- 
 ```mermaid
 sequenceDiagram
     participant Cliente
@@ -47,8 +43,8 @@ sequenceDiagram
     participant DevOps
     Cliente->>JP: Solicita recordatorios automáticos
     JP->>Backend: ¿Es viable? ¿Cuánto cuesta?
-    Backend->>JP: Estimación de esfuerzo
+    Backend->>JP: Es viable, necesitamos tarea programada y 3-4 días de desarrollo.
     JP->>DevOps: ¿Necesita infraestructura nueva?
-    DevOps->>JP: Respuesta
+    DevOps->>JP: Sí, hay que contratar un servicio de envío de correo y añadirlo al presupuesto de infraestructura.
     JP->>Cliente: Decisión final
 ```
