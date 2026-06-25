@@ -1,5 +1,13 @@
 # Informe de cierre del proyecto
 
+## Resumen ejecutivo
+
+- Alcance: Entrega de los 5 módulos definidos en el Project Charter; implementación del CR-001 (recordatorios por email).
+- Fecha planificada de entrega: 2026-09-28. Entrega real: 2026-10-05 (desviación +1 semana).
+- Coste final: 33.500 € (dentro del rango autorizado de 25.000€–35.000€); incluye 2.500 € relativos a CR-001.
+- Indicadores simplificados: Avance planificado a fecha de cierre 50%; avance real 42% → SPI = 0,84. Coste planificado a fecha 14.000 €; coste real a fecha 14.800 € → CPI = 0,95.
+- Riesgos identificados: 5 (ver tabla de estado de riesgos).
+
 ## Comparativa planificado vs. real
 
 | Dimensión | Planificado | Real | Desviación |
@@ -16,7 +24,7 @@
 | R02 | Incidencias técnicas durante configuración y despliegue | Sí | El incidente INC-001 provocó pérdida de tiempo y no estaba identificado como riesgo inicial. |
 | R03 | Cambios de alcance solicitados por el cliente | Sí | Se aprobó el CR-001 para incorporar recordatorios por email con coste adicional autorizado. |
 | R04 | Errores detectados durante las pruebas finales | No significativo | Se detectaron 3 bugs menores que fueron corregidos antes de producción. No quedaron errores críticos abiertos. |
-| R5 | Resistencia del personal de recepción al cambio | Parcialmente | Se solicita formación para el personal |
+| R05 | Resistencia del personal de recepción al cambio | Parcialmente | Se solicita formación para el personal |
 
 ## Entregables generados durante el proyecto
 
