@@ -1,0 +1,8 @@
+# Registro de lecciones aprendidas
+
+| Fase | Lección positiva | Lección de mejora | Acción recomendada |
+|-------|------------------|-------------------|-------------------|
+| Inicio | El alcance y los objetivos del proyecto quedaron claros desde el comienzo. | No se estimó correctamente la complejidad de las reglas de facturación con aseguradoras. | Analizar con más detalle los requisitos de negocio y añadir margen a las tareas de mayor incertidumbre. |
+| Planificación | Definir el contrato API desde la Sesión 2 permitió coordinar eficazmente backend y frontend. | Algunas dependencias técnicas y riesgos de infraestructura no se identificaron con suficiente antelación. | Mantener la definición temprana del API e incorporar una revisión formal de riesgos durante la planificación. |
+| Ejecución | Diseñar el plan de pruebas antes de finalizar el desarrollo redujo el tiempo necesario para las validaciones finales. | La incidencia en preproducción provocó una pérdida de tiempo que afectó al cronograma. | Preparar pruebas y validaciones tempranas, además de reforzar los controles antes de cada despliegue. |
+| Cierre | La colaboración del equipo permitió completar el proyecto y obtener aprendizajes valiosos para futuros desarrollos. | Los cambios de configuración no se validaron previamente en local, provocando la incidencia de preproducción. | Establecer como procedimiento obligatorio la validación de configuraciones en entorno local antes de aplicarlas en preproducción. |
