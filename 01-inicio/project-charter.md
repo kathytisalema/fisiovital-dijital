@@ -15,11 +15,11 @@ Desarrollar una plataforma wed para gestionar la agendación de citas duplicadas
 **Incluye:**
 - Registros de usuarios
 - Agendar citas
-- Pagos y facturaciónonline
+- Pagos y facturación online
 - Modulo de ficha clinica del paciente
 - Proteccion de datos personales
-- Capacitacion basica a usuarios
-- Informacion basica del lugar y trabajadores
+- Centralización de administración/informes.
+
 **No incluye:**
 - App movil
 - Soporte evaluativo pos periodo de garantia

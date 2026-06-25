@@ -16,20 +16,19 @@
 | R02 | Incidencias técnicas durante configuración y despliegue | Sí | El incidente INC-001 provocó pérdida de tiempo y no estaba identificado como riesgo inicial. |
 | R03 | Cambios de alcance solicitados por el cliente | Sí | Se aprobó el CR-001 para incorporar recordatorios por email con coste adicional autorizado. |
 | R04 | Errores detectados durante las pruebas finales | No significativo | Se detectaron 3 bugs menores que fueron corregidos antes de producción. No quedaron errores críticos abiertos. |
+| R5 | Resistencia del personal de recepción al cambio | Parcialmente | Se solicita formación para el personal |
 
 ## Entregables generados durante el proyecto
 
-- 5 módulos completos definidos en el alcance inicial.
-- Registro de usuarios.
-- Gestión y agendamiento de citas.
-- Pagos y facturación online.
-- Módulo de ficha clínica del paciente.
-- Protección de datos personales.
-- Informes de ocupación por clínica.
-- Recordatorios por email (CR-001).
-- Documentación de pruebas y regresión QA.
-- Informes de seguimiento del proyecto.
-- Documentación de cierre del proyecto.
+- 5 módulos entregados según el alcance inicial: Autenticación, Citas, Pacientes/Historial, Facturación y Administración/Informes.
+- Implementación del CR-001: recordatorios automáticos por correo electrónico.
+- Contrato de API documentado para los módulos de Citas y Facturación.
+- Plan de pruebas del módulo de Facturación.
+- Estrategia de despliegue y pipeline CI/CD.
+- Acta de aceptación final del proyecto.
+- Informe de seguimiento semanal y gestión de avances.
+- Registro y análisis de la incidencia INC-001 en preproducción.
+- Documentación administrativa y de cierre del proyecto.
 
 ## Cierre administrativo/contractual
 
